@@ -1,6 +1,10 @@
 ﻿#include "DxLib.h"
 
-
+void DrawHP(int hp, int hpMax) {
+	int color = GetColor(255, 255, 255);
+	DrawBox(100, 100, 100 + 200, 100 + 20, color, FALSE);		//枠を描画
+	DrawBox(100, 100, 100 + 200 * hp / hpMax, 100 + 20, color, TRUE);	//HPゲージを描画
+}
 // プログラムは WinMain から始まります
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
@@ -19,7 +23,15 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	while (ProcessMessage() == 0 && CheckHitKey(KEY_INPUT_ESCAPE) == 0)
 	{
 		//ドット描画処理
-		
+		int hp = 0, hpMax = 180;
+
+		while (!ScreenFlip() && !ProcessMessage() && !ClearDrawScreen()) {
+			DrawHP(hp, hpMax);
+			hp++;
+			if (hp >= hpMax) {
+				hp = 0;
+			}
+		}
 	    
 
 		int color = GetColor(255, 255, 255);

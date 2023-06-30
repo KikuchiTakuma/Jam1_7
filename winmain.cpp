@@ -1,5 +1,5 @@
 ﻿#include "DxLib.h"
-#include "gokigocky.h"
+
 
 // プログラムは WinMain から始まります
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
@@ -20,7 +20,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	{
 		//ドット描画処理
 		
-	    DisplayHp();
+	    
 
 		int color = GetColor(255, 255, 255);
 		DrawPixel(400, 300, color);

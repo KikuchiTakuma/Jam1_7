@@ -13,7 +13,4 @@
       <Filter>ソースファイル</Filter>
     </ClCompile>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="chinomasato.h" />
-  </ItemGroup>
 </Project>

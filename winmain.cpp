@@ -1,14 +1,13 @@
 ﻿#include "DxLib.h"
 #include "HpBar.h"
-//ファイル分け待ち
-//途中
+
 int die = false;
 void DrawHP(int hp, int hpMax) {
 	int color = GetColor(255, 255, 255);
 	
-	DrawBox(100, 100, 100 + 200, 100 + 20, color, FALSE);		//枠を描画
+	DrawBox(100, 100, 100 + 200, 100 + 20, color, FALSE);//枠を描画
 	if(die == false){
-	DrawBox(100, 100, 100 + 200 * hp / hpMax, 100 + 20, color, true);	//HPゲージを描画
+	DrawBox(100, 100, 100 + 200 * hp / hpMax, 100 + 20, color, true);//HPゲージを描画
 	}
 }
 
@@ -34,15 +33,15 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		//ドット描画処理
 		
 		
-		int hp = 200, hpMax = 200;
+		int hpbar = 200, hpMax = 200;
 
 		while (!ScreenFlip() && !ProcessMessage() && !ClearDrawScreen()) {
-			DrawHP(hp, hpMax);
-			hp--;
-			if (hp >= hpMax) {
-				hp = 0;
+			DrawHP(hpbar, hpMax);
+			hpbar--;
+			if (hpbar >= hpMax) {
+				hpbar = 0;
 			}
-			if (hp == 0)
+			if (hpbar == 0)
 			{
 				die = true;
 			}

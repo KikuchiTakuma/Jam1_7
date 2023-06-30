@@ -12,14 +12,8 @@
     <ClCompile Include="winmain.cpp">
       <Filter>ソースファイル</Filter>
     </ClCompile>
-    <ClCompile Include="gokibro.cpp">
-      <Filter>ソースファイル</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chinomasato.h" />
-    <ClInclude Include="gokigocky.h">
-      <Filter>ヘッダファイル</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

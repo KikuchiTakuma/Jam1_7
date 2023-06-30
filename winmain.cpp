@@ -1,5 +1,5 @@
 ﻿#include "DxLib.h"
-#include"gokigocky.h"
+#include "gokigocky.h"
 
 // プログラムは WinMain から始まります
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
@@ -19,7 +19,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	while (ProcessMessage() == 0 && CheckHitKey(KEY_INPUT_ESCAPE) == 0)
 	{
 		//ドット描画処理
-		goki();
+		
+	    DisplayHp();
+
 		int color = GetColor(255, 255, 255);
 		DrawPixel(400, 300, color);
 		ScreenFlip();		//裏画面と表画面の入替

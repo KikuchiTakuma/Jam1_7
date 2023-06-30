@@ -12,5 +12,13 @@
     <ClCompile Include="winmain.cpp">
       <Filter>ソースファイル</Filter>
     </ClCompile>
+    <ClCompile Include="HpBar.cpp">
+      <Filter>ソースファイル</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="HpBar.h">
+      <Filter>ヘッダファイル</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
